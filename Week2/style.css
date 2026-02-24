@@ -1,0 +1,358 @@
+/* ===========================================
+   TUTORIAL 3: CSS GRID LAYOUT
+   
+   Your tasks:
+   1. Define the page grid on .page-layout
+   2. Assign grid-area to each section
+   3. Make .list-section items flow with Flexbox
+   4. Add mobile breakpoint under 48rem
+   =========================================== */
+
+/* External font - add your choice from Google Fonts, Inter will not be graded */
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Roboto+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Spacing scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  
+  /* Colors - customize these */
+  --color-bg: hsl(0, 0%, 95%);
+  --color-surface: hsl(0, 0%, 100%);
+  --color-text: hsl(0, 0%, 10%);
+  --color-text-muted: hsl(0, 0%, 45%);
+  --color-accent: hsl(220, 80%, 50%);
+  --color-border: hsl(0, 0%, 90%);
+  
+  /* Typography */
+  --font-body: 'Roboto Mono', monospace;
+  --font-display: 'Libre Baskerville', serif;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* ===========================================
+   TASK 1: PAGE GRID STRUCTURE
+   
+   Define your grid here. You need:
+   - grid-template-areas for the layout map
+   - grid-template-columns for column widths
+   - grid-template-rows for row heights
+   - min-height: 100vh to fill the viewport
+   - gap for spacing between regions
+   =========================================== */
+
+.page-layout {
+  display: grid;
+  grid-template-areas: 
+  "header header" 
+  "hero list" 
+  "footer footer";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  min-height: 100vh;
+  gap: var(--spacing-md);
+}
+
+/* ===========================================
+   TASK 2: ASSIGN GRID AREAS
+   
+   Connect each section to its named area
+   =========================================== */
+
+.site-header {
+  grid-area: header;
+  background: var(--color-surface);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-section {
+  grid-area: hero;
+  padding: var(--spacing-xl);
+}
+
+.list-section {
+  grid-area: list;
+  padding: var(--spacing-lg);
+}
+
+.site-footer {
+  grid-area: footer;
+  background: var(--color-text);
+  color: var(--color-bg);
+  padding: var(--spacing-lg);
+  /* NOTE: Footer should not exceed main content width */
+}
+
+/* ===========================================
+   TASK 3: FLEXBOX FOR COMPONENTS
+   
+   Use Flexbox to arrange items WITHIN grid regions
+   =========================================== */
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--spacing-md);
+  list-style: none;
+  padding: 0;
+}
+
+/* Make list items flow horizontally on large screens */
+.list-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.list-item {
+  background: var(--color-surface);
+  padding: var(--spacing-lg);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  flex: 1 1 250px;
+}
+
+/* ===========================================
+   TASK 4: RESPONSIVE BREAKPOINT
+   
+   Under 48rem:
+   - Stack all grid regions vertically
+   - List items should stack vertically too
+   =========================================== */
+
+
+@media (max-width: 48rem) {
+  .page-layout {
+    grid-template-areas:
+      "header"
+      "hero"
+      "list"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+  
+  .list-section {
+    flex-direction: column;
+  }
+  
+  .list-item {
+    width: 100%;
+  }
+}
+
+/* ===========================================
+   TYPOGRAPHY (provided)
+   =========================================== */
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================================
+   CARD COMPONENTS
+   =========================================== */
+
+/* --- Shared Card Styles --- */
+.card {
+  background: var(--color-surface);
+  border-radius: 1rem;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+.card-image-sm img {
+  width: 90px;
+  height: 90px;
+  border-radius: 0.5rem;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 0;
+  color: var(--color-text);
+}
+
+.card-title-sm {
+  font-size: 1.25rem;
+}
+
+.card-date {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-weight: 200;
+  margin-top: var(--spacing-xs);
+}
+
+.card-description {
+  margin-top: var(--spacing-sm);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 200;
+  color: var(--color-text-muted);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-sm {
+  width: 24px;
+  height: 24px;
+}
+
+/* --- component-simple --- */
+.card-simple {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-xl);
+  gap: var(--spacing-xl);
+}
+
+/* --- component-intermediate --- */
+.card-intermediate {
+  padding: var(--spacing-xl);
+}
+
+.card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-body {
+  flex: 1;
+}
+
+.card-stats {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--spacing-lg);
+  padding-bottom: 0;
+  margin-top: var(--spacing-md);
+  margin-bottom: 0;
+  border: none;
+}
+
+.stat {
+  font-size: 12px;
+  font-weight: 200;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stat i {
+  font-size: 1.1rem;
+}
+
+/* --- component-complex --- */
+.card-complex {
+  padding: var(--spacing-lg);
+  width: 100%;
+}
+
+.card-complex .card-top {
+  gap: var(--spacing-md);
+}
+
+/* Comment list */
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--spacing-lg);
+}
+
+.comment-item {
+  padding: var(--spacing-lg) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.comment-time {
+  font-size: 12px;
+  font-weight: 200;
+  color: var(--color-text-muted);
+}
+
+.comment-text {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+/* Spacing between hero cards */
+.hero-section .card {
+  margin-top: var(--spacing-lg);
+}

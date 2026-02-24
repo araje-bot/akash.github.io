@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial 3: Grid Layout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-layout">
+  <header class="site-header">
+    <nav class="header-nav">
+      <!-- Style this flexible nav component -->
+      <span class="logo">Site Name</span>
+      <ul class="nav-links">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="hero-section">
+    <h1>Hero Headline</h1>
+    <p>Supporting text for the hero section goes here.</p>
+
+    <!-- component-simple -->
+    <div class="card card-simple">
+      <div class="card-image">
+        <img src="img-placeholder.jpg" alt="Thumbnail">
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">Header</h2>
+        <p class="card-date">Sep 18, 2025</p>
+        <p class="card-description">Lorem ipsum dolor sit amet consectetur. Vel elementum ipsum sit convallis commodo sed.</p>
+      </div>
+    </div>
+
+    <!-- component-intermediate -->
+    <div class="card card-intermediate">
+      <div class="card-top">
+        <div class="card-image">
+          <img src="img-placeholder.jpg" alt="Thumbnail">
+        </div>
+        <div class="card-body">
+          <div class="card-header-row">
+            <div>
+              <h2 class="card-title">Header</h2>
+              <p class="card-date">Sep 18, 2025</p>
+            </div>
+            <div class="card-author">
+              <img src="profile-placeholder.png" alt="Avatar" class="avatar">
+              <span>Author Name</span>
+            </div>
+          </div>
+          <p class="card-description">Lorem ipsum dolor sit amet consectetur. Vel elementum ipsum sit convallis commodo sed.</p>
+        </div>
+      </div>
+      <div class="card-stats">
+        <span class="stat"><i class="fa-regular fa-comment"></i> 2 comments</span>
+        <span class="stat"><i class="fa-regular fa-heart"></i> 10 likes</span>
+        <span class="stat"><i class="fa-regular fa-bookmark"></i> 10 saves</span>
+      </div>
+    </div>
+  </main>
+
+  <section class="list-section">
+    <!-- component-complex -->
+    <div class="card card-complex">
+      <!-- Main post card -->
+      <div class="card-top">
+        <div class="card-image card-image-sm">
+          <img src="img-placeholder.jpg" alt="Thumbnail">
+        </div>
+        <div class="card-body">
+          <div class="card-header-row">
+            <div>
+              <h2 class="card-title card-title-sm">Header</h2>
+              <p class="card-date">Sep 18, 2025</p>
+            </div>
+            <div class="card-author">
+              <img src="profile-placeholder.png" alt="Avatar" class="avatar avatar-sm">
+              <span>Author Name</span>
+            </div>
+          </div>
+          <p class="card-description">Lorem ipsum dolor sit amet consectetur. Vel elementum ipsum.</p>
+        </div>
+      </div>
+      <div class="card-stats">
+        <span class="stat"><i class="fa-regular fa-comment"></i> 2 comments</span>
+        <span class="stat"><i class="fa-regular fa-heart"></i> 10 likes</span>
+        <span class="stat"><i class="fa-regular fa-bookmark"></i> 3 saves</span>
+      </div>
+
+      <!-- Comment list -->
+      <div class="comment-list">
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="card-author">
+              <img src="profile-placeholder.png" alt="Avatar" class="avatar avatar-sm">
+              <span>Author Name</span>
+            </div>
+            <span class="comment-time">6m ago</span>
+          </div>
+          <p class="comment-text">Enim orci sapien laoreet risus dictumst orci diam mauris.</p>
+        </div>
+
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="card-author">
+              <img src="profile-placeholder.png" alt="Avatar" class="avatar avatar-sm">
+              <span>Author Name</span>
+            </div>
+            <span class="comment-time">2h ago</span>
+          </div>
+          <p class="comment-text">Turpis sed leo amet arcu viverra.</p>
+        </div>
+
+        <div class="comment-item">
+          <div class="comment-header">
+            <div class="card-author">
+              <img src="profile-placeholder.png" alt="Avatar" class="avatar avatar-sm">
+              <span>Author Name</span>
+            </div>
+            <span class="comment-time">12h ago</span>
+          </div>
+          <p class="comment-text">Bibendum pulvinar a congue auctor velit massa ultricies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="site-footer">
+    <p>Footer content</p>
+  </footer>
+</body>
+</html>
