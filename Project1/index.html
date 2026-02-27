@@ -318,33 +318,6 @@
                 updateProgress();
             });
         });
-
-        /* ── Cookie crumb burst on click ── */
-        const CRUMB_COLORS = ['#C05621', '#8B4513', '#D4A04A', '#6B3410', '#E07840', '#A0522D'];
-        const CRUMB_COUNT  = 8;
-
-        document.addEventListener('click', function (e) {
-            for (let i = 0; i < CRUMB_COUNT; i++) {
-                const crumb  = document.createElement('span');
-                const angle  = (Math.PI * 2 / CRUMB_COUNT) * i + (Math.random() - 0.5) * 0.8;
-                const dist   = 28 + Math.random() * 38;
-                const size   = 4 + Math.random() * 5;
-                const color  = CRUMB_COLORS[Math.floor(Math.random() * CRUMB_COLORS.length)];
-
-                crumb.className = 'cookie-crumb';
-                crumb.style.cssText =
-                    'left:' + e.clientX + 'px;' +
-                    'top:'  + e.clientY + 'px;' +
-                    'width:'  + size + 'px;' +
-                    'height:' + (size * (0.7 + Math.random() * 0.6)) + 'px;' +
-                    'background:' + color + ';' +
-                    '--tx:' + (Math.cos(angle) * dist) + 'px;' +
-                    '--ty:' + (Math.sin(angle) * dist - 18) + 'px;';
-
-                document.body.appendChild(crumb);
-                crumb.addEventListener('animationend', () => crumb.remove());
-            }
-        });
     </script>
 </body>
 </html>
