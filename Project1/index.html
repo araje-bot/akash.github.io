@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Chocolate Chip Cookies — Recipe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="recipe-container">
+
+        <!-- ── HEADER ── -->
+        <header class="recipe-header">
+            <img src="https://www.incredibleegg.org/wp-content/uploads/2015/06/d-classic-chocolate-chip-cookies-2100x963-1.jpg"
+                 alt="Golden brown chocolate chip cookies on a cooling rack"
+                 class="recipe-image"
+                 width="600" height="400">
+            <div class="recipe-header-text">
+                <p class="recipe-eyebrow">Homemade &nbsp;·&nbsp; Classic &nbsp;·&nbsp; Crowd Favourite</p>
+                <h1 class="recipe-title">Classic Chocolate Chip Cookies</h1>
+            </div>
+        </header>
+
+        <!-- ── COOK INFO ── pill tags: label · value -->
+        <section class="recipe-meta">
+            <div class="meta-item">
+                <span class="meta-label">Prep</span>
+                <span class="meta-value">15 min</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Cook</span>
+                <span class="meta-value">12 min</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Total</span>
+                <span class="meta-value">27 min</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Cookies</span>
+                <span class="meta-value">24</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Level</span>
+                <span class="meta-value">Easy</span>
+            </div>
+        </section>
+
+        <!-- ── DESCRIPTION ── -->
+        <section class="recipe-description">
+            <p>These classic chocolate chip cookies are crispy on the edges, chewy in the middle,
+               and packed with chocolate chips. Perfect for any occasion, from lunch boxes to
+               holiday gatherings. This foolproof recipe has been tested countless times and
+               always delivers delicious results.</p>
+        </section>
+
+        <!-- ── INGREDIENTS ── tap/click any card to check it off while shopping or cooking -->
+        <section class="ingredients-section">
+            <div class="ingredients-section-header">
+                <h2>Ingredients</h2>
+                <div class="ingredients-progress-wrap">
+                    <span class="ingredients-progress-label"><span id="checked-count">0</span>&thinsp;/&thinsp;10 checked</span>
+                    <div class="ingredients-progress-bar">
+                        <div class="ingredients-progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+            <ul class="ingredients-list">
+
+                <li class="ingredient-item">
+                    <label class="ingredient-card">
+                        <input type="checkbox" id="ing-flour" class="ingredient-check">
+                        <div class="ingredient-img-wrap">
+                            <img src="https://www.janiesmill.com/cdn/shop/products/Iroquois_All_Purpose_Flour_9859_copy_9c3eef8e-e158-4365-a135-93e133bfe48a_2400x.jpg?v=1759856015"
+                                 alt="Flour" class="ingredient-img"
+                                 loading="lazy" width="52" height="52">
+                        </div>
+                        <div class="ingredient-info">
+                            <span class="ingredient-name">All-purpose flour</span>
+                            <span class="ingredient-amount">2¼ cups</span>
+                        </div>
+                        <span class="ingredient-checkbox-ui" aria-hidden="true"></span>
+                    </label>
+                </li>
+                <li class="ingredient-item">
+                    <label class="ingredient-card">
+                        <input type="checkbox" id="ing-soda" class="ingredient-check">
+                        <div class="ingredient-img-wrap">
+                            <img src="https://cdn-prod.medicalnewstoday.com/content/images/articles/321/321137/baking-soda-on-a-spoon-which-may-be-used-for-acne.jpg"
+                                 alt="Baking soda" class="ingredient-img"
+                                 loading="lazy" width="52" height="52">
+                        </div>
+                        <div class="ingredient-info">
+                            <span class="ingredient-name">Baking soda</span>
+                            <span class="ingredient-amount">1 teaspoon</span>
+                        </div>
+                        <span class="ingredient-checkbox-ui" aria-hidden="true"></span>
+                    </label>
+                </li>
+                <li class="ingredient-item">
+                    <label class="ingredient-card">
+                        <input type="checkbox" id="ing-salt" class="ingredient-check">
+                        <div class="ingredient-img-wrap">
+                            <img src="https://hips.hearstapps.com/hmg-prod/images/what-is-kosher-salt-1639148182.jpg?crop=0.669xw:1.00xh;0.259xw,0&resize=640:*"
+                                 alt="Salt" class="ingredient-img"
+                                 loading="lazy" width="52" height="52">
+                        </div>
+                        <div class="ingredient-info">
+                            <span class="ingredient-name">Salt</span>
+                            <span class="ingredient-amount">1 teaspoon</span>
+                        </div>
+                        <span class="ingredient-checkbox-ui" aria-hidden="true"></span>
+                    </label>
+                </li>
+                <li class="ingredient-item">
+                    <label class="ingredient-card">
+                        <input type="checkbox" id="ing-butter" class="ingredient-check">
+                        <div class="ingredient-img-wrap">
+                            <img src="https://www.insidetherustickitchen.com/wp-content/uploads/2019/07/How-to-soften-butter-square-Inside-the-Rustic-Kitchen.jpg"
+                                 alt="Butter" class="ingredient-img"
+                                 loading="lazy" width="52" height="52">
+                        </div>
+                        <div class="ingredient-info">
+                            <span class="ingredient-name">Butter, softened</span>
+                            <span class="ingredient-amount">1 cup (2 sticks)</span>
+                        </div>
+                        <span class="ingredient-checkbox-ui" aria-hidden="true"></span>
+                    </label>
+                </li>
+                <li class="ingredient-item">
+                    <label class="ingredient-card">
+                        <input type="checkbox" id="ing-sugar" class="ingredient-check">
+                        <div class="ingredient-img-wrap">
+                            <img src="https://www.tasteofhome.com/wp-content/uploads/2019/11/sugar-shutterstock_615908132.jpg?fit=1024,640"
+                                 alt="Granulated sugar" class="ingredient-img"
+                                 loading="lazy" width="52" height="52">
+                        </div>
+                        <div class="ingredient-info">
+                            <span class="ingredient-name">Granulated sugar</span>
+                            <span class="ingredient-amount">¾ cup</span>
+                        </div>
+                        <span class="ingredient-checkbox-ui" aria-hidden="true"></span>
+                    </label>
+                </li>
+                <li class="ingredient-item">
+                    <label class="ingredient-card">
+                        <input type="checkbox" id="ing-brown-sugar" class="ingredient-check">
+                        <div class="ingredient-img-wrap">
+                            <img src="https://s.yimg.com/ny/api/res/1.2/heHnxYgtn9G7BkcLJEnrkQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTUzOTtjZj13ZWJw/https://media.zenfs.com/en/tasting_table_543/e9342687f632451b4df589a36bb628dc"
+                                 alt="Brown sugar" class="ingredient-img"
+                                 loading="lazy" width="52" height="52">
+                        </div>
+                        <div class="ingredient-info">
+                            <span class="ingredient-name">Brown sugar, packed</span>
+                            <span class="ingredient-amount">¾ cup</span>
+                        </div>
+                        <span class="ingredient-checkbox-ui" aria-hidden="true"></span>
+                    </label>
+                </li>
+                <li class="ingredient-item">
+                    <label class="ingredient-card">
+                        <input type="checkbox" id="ing-eggs" class="ingredient-check">
+                        <div class="ingredient-img-wrap">
+                            <img src="https://www.nicolaspujol.com/wp-content/uploads/2018/02/2-large-organic-brown-eggs.jpg"
+                                 alt="Eggs" class="ingredient-img"
+                                 loading="lazy" width="52" height="52">
+                        </div>
+                        <div class="ingredient-info">
+                            <span class="ingredient-name">Eggs, large</span>
+                            <span class="ingredient-amount">2</span>
+                        </div>
+                        <span class="ingredient-checkbox-ui" aria-hidden="true"></span>
+                    </label>
+                </li>
+                <li class="ingredient-item">
+                    <label class="ingredient-card">
+                        <input type="checkbox" id="ing-vanilla" class="ingredient-check">
+                        <div class="ingredient-img-wrap">
+                            <img src="https://tastyoven.com/wp-content/uploads/2022/10/instant-pot-vanilla-extract-image.jpg"
+                                 alt="Vanilla extract" class="ingredient-img"
+                                 loading="lazy" width="52" height="52">
+                        </div>
+                        <div class="ingredient-info">
+                            <span class="ingredient-name">Vanilla extract</span>
+                            <span class="ingredient-amount">2 teaspoons</span>
+                        </div>
+                        <span class="ingredient-checkbox-ui" aria-hidden="true"></span>
+                    </label>
+                </li>
+                <li class="ingredient-item">
+                    <label class="ingredient-card">
+                        <input type="checkbox" id="ing-chips" class="ingredient-check">
+                        <div class="ingredient-img-wrap">
+                            <img src="https://www.preparedpantry.com/cdn/shop/products/13780307_lmilkchocolatechipsreduced_02cec14d-1b24-4cb1-aa0f-0a168ba4d856.jpg?v=1664678299&width=480"
+                                 alt="Chocolate chips" class="ingredient-img"
+                                 loading="lazy" width="52" height="52">
+                        </div>
+                        <div class="ingredient-info">
+                            <span class="ingredient-name">Chocolate chips</span>
+                            <span class="ingredient-amount">2 cups</span>
+                        </div>
+                        <span class="ingredient-checkbox-ui" aria-hidden="true"></span>
+                    </label>
+                </li>
+                <li class="ingredient-item">
+                    <label class="ingredient-card">
+                        <input type="checkbox" id="ing-walnuts" class="ingredient-check">
+                        <div class="ingredient-img-wrap">
+                            <img src="https://www.gourmetfoodworld.com/images/Product/large/walnuts-halves-and-pieces-light-1S-1335.jpg"
+                                 alt="Walnuts" class="ingredient-img"
+                                 loading="lazy" width="52" height="52">
+                        </div>
+                        <div class="ingredient-info">
+                            <span class="ingredient-name">Walnuts, chopped <em>(optional)</em></span>
+                            <span class="ingredient-amount">1 cup</span>
+                        </div>
+                        <span class="ingredient-checkbox-ui" aria-hidden="true"></span>
+                    </label>
+                </li>
+
+            </ul>
+        </section>
+
+        <!-- ── INSTRUCTIONS ── numbered steps to follow while cooking -->
+        <section class="instructions-section">
+            <h2>Instructions</h2>
+            <ol class="instructions-list">
+                <li class="instruction-step">
+                    <div class="step-content">
+                        <strong>Preheat oven</strong>
+                        to 375°F (190°C). Line baking sheets with parchment paper.
+                    </div>
+                </li>
+                <li class="instruction-step">
+                    <div class="step-content">
+                        <strong>Mix dry ingredients:</strong>
+                        In a medium bowl, whisk together flour, baking soda, and salt. Set aside.
+                    </div>
+                </li>
+                <li class="instruction-step">
+                    <div class="step-content">
+                        <strong>Cream butter and sugars:</strong>
+                        In a large bowl, beat softened butter with both sugars until light and fluffy, about 2–3 minutes.
+                    </div>
+                </li>
+                <li class="instruction-step">
+                    <div class="step-content">
+                        <strong>Add eggs and vanilla:</strong>
+                        Beat in eggs one at a time, then stir in vanilla extract.
+                    </div>
+                </li>
+                <li class="instruction-step">
+                    <div class="step-content">
+                        <strong>Combine wet and dry:</strong>
+                        Gradually blend in the flour mixture until just combined. Don't overmix.
+                    </div>
+                </li>
+                <li class="instruction-step">
+                    <div class="step-content">
+                        <strong>Fold in chocolate chips:</strong>
+                        Stir in chocolate chips and nuts (if using).
+                    </div>
+                </li>
+                <li class="instruction-step">
+                    <div class="step-content">
+                        <strong>Shape and bake:</strong>
+                        Drop rounded tablespoons of dough onto prepared baking sheets, spacing 2 inches apart. Bake 9–11 minutes until golden brown.
+                    </div>
+                </li>
+                <li class="instruction-step">
+                    <div class="step-content">
+                        <strong>Cool:</strong>
+                        Let cool on baking sheet for 2 minutes, then transfer to a wire rack.
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- ── FOOTER ── -->
+        <footer class="recipe-footer">
+            <p>Recipe adapted from a traditional family cookbook &nbsp;·&nbsp; ~150 cal per cookie</p>
+            <p>dessert &nbsp;·&nbsp; baking &nbsp;·&nbsp; cookies &nbsp;·&nbsp; chocolate &nbsp;·&nbsp; family-friendly</p>
+        </footer>
+
+    </div>
+
+    <!-- celebration toast -->
+    <div class="cookie-toast" id="cookie-toast">All ingredients ready — let's bake!</div>
+
+    <script>
+        /* ── Progress bar ── */
+        const checks  = document.querySelectorAll('.ingredient-check');
+        const fill    = document.getElementById('progress-fill');
+        const countEl = document.getElementById('checked-count');
+        const toast   = document.getElementById('cookie-toast');
+        const total   = checks.length;
+        let toastTimer;
+
+        function updateProgress() {
+            const checked = [...checks].filter(c => c.checked).length;
+            countEl.textContent = checked;
+            fill.style.width = (checked / total * 100) + '%';
+
+            if (checked === total) {
+                clearTimeout(toastTimer);
+                toast.classList.add('show');
+                toastTimer = setTimeout(() => toast.classList.remove('show'), 3500);
+            }
+        }
+
+        checks.forEach(function (checkbox) {
+            checkbox.addEventListener('change', function () {
+                const card = this.closest('.ingredient-card');
+                card.classList.toggle('is-checked', this.checked);
+                /* spring pop on check */
+                card.classList.remove('card-pop');
+                void card.offsetWidth; /* reflow to restart animation */
+                card.classList.add('card-pop');
+                updateProgress();
+            });
+        });
+
+        /* ── Cookie crumb burst on click ── */
+        const CRUMB_COLORS = ['#C05621', '#8B4513', '#D4A04A', '#6B3410', '#E07840', '#A0522D'];
+        const CRUMB_COUNT  = 8;
+
+        document.addEventListener('click', function (e) {
+            for (let i = 0; i < CRUMB_COUNT; i++) {
+                const crumb  = document.createElement('span');
+                const angle  = (Math.PI * 2 / CRUMB_COUNT) * i + (Math.random() - 0.5) * 0.8;
+                const dist   = 28 + Math.random() * 38;
+                const size   = 4 + Math.random() * 5;
+                const color  = CRUMB_COLORS[Math.floor(Math.random() * CRUMB_COLORS.length)];
+
+                crumb.className = 'cookie-crumb';
+                crumb.style.cssText =
+                    'left:' + e.clientX + 'px;' +
+                    'top:'  + e.clientY + 'px;' +
+                    'width:'  + size + 'px;' +
+                    'height:' + (size * (0.7 + Math.random() * 0.6)) + 'px;' +
+                    'background:' + color + ';' +
+                    '--tx:' + (Math.cos(angle) * dist) + 'px;' +
+                    '--ty:' + (Math.sin(angle) * dist - 18) + 'px;';
+
+                document.body.appendChild(crumb);
+                crumb.addEventListener('animationend', () => crumb.remove());
+            }
+        });
+    </script>
+</body>
+</html>
