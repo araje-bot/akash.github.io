@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maryland Inspections</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="top-bar">
+            <div class="top-bar__brand">
+                <span class="top-bar__title">Maryland Inspections</span>
+            </div>
+            <nav class="top-bar__nav" aria-label="Views">
+                <button type="button" class="nav-pill" id="btn-table" data-view="table" aria-label="Table View">
+                    <i class="fa-solid fa-table nav-pill__icon" aria-hidden="true"></i>
+                    <span>Table View</span>
+                </button>
+                <button type="button" class="nav-pill" id="btn-categories" data-view="categories" aria-label="Category View">
+                    <i class="fa-solid fa-layer-group nav-pill__icon" aria-hidden="true"></i>
+                    <span>Category View</span>
+                </button>
+                <button type="button" class="nav-pill" id="btn-stats" data-view="stats" aria-label="Statistics View">
+                    <i class="fa-solid fa-chart-simple nav-pill__icon" aria-hidden="true"></i>
+                    <span>Statistics View</span>
+                </button>
+                <button type="button" class="nav-pill" id="btn-external" data-view="external" aria-label="Map View">
+                    <i class="fa-solid fa-map-location-dot nav-pill__icon" aria-hidden="true"></i>
+                    <span>Map View</span>
+                </button>
+            </nav>
+        </header>
+
+        <main class="main-flow">
+            <div class="display-shell">
+                <div id="data-display" class="display-inner">
+                    <div class="loading"><i class="fa-solid fa-spinner fa-spin loading__icon" aria-hidden="true"></i> Loading Restaurant Data</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="stats-drilldown" class="stats-drilldown" aria-hidden="true">
+        <div class="stats-drilldown__backdrop" aria-hidden="true"></div>
+        <div class="stats-drilldown__panel" role="dialog" aria-modal="true" aria-labelledby="stats-drilldown-title">
+            <div class="stats-drilldown__header">
+                <h2 id="stats-drilldown-title" class="view-title stats-drilldown__title">
+                    <i class="fa-solid fa-table-list view-title__icon" aria-hidden="true"></i>
+                    <span id="stats-drilldown-title-text" class="stats-drilldown__title-text"></span>
+                </h2>
+                <button type="button" class="stats-drilldown__close" aria-label="Close panel">
+                    <i class="fa-solid fa-xmark stats-drilldown__close-icon" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="stats-drilldown__body">
+                <div class="table-scroll card-surface">
+                    <table class="restaurant-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">City</th>
+                            </tr>
+                        </thead>
+                        <tbody id="stats-drilldown-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
